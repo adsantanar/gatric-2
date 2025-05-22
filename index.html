@@ -3,43 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GATRIC - Vaciamos Naves en Gran Canaria | Gestión de Residuos Profesional</title>
-    <meta name="description" content="¿Necesitas vaciar una nave, local o vivienda en Gran Canaria? Retiramos todo tipo de residuos con certificado legal. ¡Presupuesto por WhatsApp en 2 horas!">
-    <!-- (Mantén los mismos estilos CSS de antes) -->
+    <title>GATRIC | Vaciamos Naves y Gestionamos Residuos en Gran Canaria</title>
+    <meta name="description" content="Vaciamos naves, locales y viviendas en Gran Canaria. Certificado legal incluido. ¡Presupuesto por WhatsApp en 2 horas! Atendemos Las Palmas, Telde, Vecindario y toda la isla.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --verde-oscuro: #2E7D32;
+            --naranja: #FF6D00;
+            --gris-claro: #f5f5f5;
+            --blanco: #ffffff;
+            --gris-texto: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--gris-texto);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--blanco);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-g {
+            width: 40px;
+            height: 40px;
+            background-color: var(--verde-oscuro);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            position: relative;
+        }
+        
+        .logo-g::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 3px solid var(--blanco);
+            border-radius: 50%;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            transform: rotate(-45deg);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--verde-oscuro);
+        }
+        
+        .logo-tagline {
+            font-size: 12px;
+            color: var(--gris-texto);
+            margin-left: 5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--gris-texto);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--verde-oscuro);
+        }
+        
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25D366;
+            color: var(--blanco);
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--blanco);
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .location-tag {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        /* Problema + Solución */
+        .problem-solution {
+            padding: 80px 0;
+            background-color: var(--gris-claro);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--verde-oscuro);
+        }
+        
+        .benefits {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .benefit {
+            flex: 0 0 calc(33.333% - 30px);
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 30px;
+            background-color: var(--blanco);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .benefit-icon {
+            font-size: 40px;
+            color: var(--naranja);
+            margin-bottom: 20px;
+        }
+        
+        .benefit h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Servicios */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background-color: var(--blanco);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            color: var(--verde-oscuro);
+            margin-bottom: 15px;
+        }
+        
+        /* CTA WhatsApp */
+        .cta-whatsapp {
+            padding: 60px 0;
+            background-color: var(--verde-oscuro);
+            text-align: center;
+            color: var(--blanco);
+        }
+        
+        .cta-whatsapp h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        
+        .cta-whatsapp p {
+            margin-bottom: 30px;
+            font-size: 18px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--gris-texto);
+            color: var(--blanco);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--blanco);
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            margin-bottom: 20px;
+        }
+        
+        .social-icons a {
+            color: var(--blanco);
+            font-size: 20px;
+            margin: 0 10px;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .footer-location {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        
+        .footer-location i {
+            margin-right: 8px;
+            color: var(--naranja);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .benefit {
+                flex: 0 0 100%;
+            }
+            
+            .btn-whatsapp {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header (igual que antes) -->
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-g"></div>
+                <div>
+                    <span class="logo-text">ATRIC</span>
+                    <span class="logo-tagline">Gestión Ambiental</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#como-funciona">Cómo funciona</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/34675280961" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Presupuesto
+            </a>
+        </div>
+    </header>
 
-    <!-- Hero Section con enfoque en Gran Canaria -->
+    <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="container hero-content">
-            <h1>Servicio profesional de <span style="color: var(--naranja);">vaciamiento en Gran Canaria</span></h1>
-            <p class="location-tag"><i class="fas fa-map-marker-alt"></i> Atendemos toda la isla - Las Palmas, Telde, Vecindario, Arucas y más</p>
-            <p>¿Cierre de negocio? ¿Mudanza? Nosotros nos encargamos de los residuos con garantía legal</p>
+            <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Servicio en toda Gran Canaria</span>
+            <h1>Vaciamos naves y gestionamos residuos <span style="color: var(--naranja);">en 24-48 horas</span></h1>
+            <p>¿Cierre de negocio? ¿Mudanza? Retiramos todo tipo de residuos con certificado legal</p>
             <a href="https://wa.me/34675280961" class="btn-whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> Presupuesto GRATIS por WhatsApp
             </a>
+            <p style="margin-top: 20px; font-size: 14px;"><i class="fas fa-check-circle"></i> Atendemos Las Palmas, Telde, Vecindario y toda la isla</p>
         </div>
     </section>
 
-    <!-- Problema + Solución con enfoque local -->
+    <!-- Problema + Solución -->
     <section class="problem-solution" id="como-funciona">
         <div class="container">
-            <h2 class="section-title">¿Tienes que vaciar un espacio en <span style="color: var(--verde-oscuro);">Gran Canaria</span>?</h2>
+            <h2 class="section-title">¿Necesitas vaciar un local, nave o vivienda en <span style="color: var(--verde-oscuro);">Gran Canaria</span>?</h2>
             <div class="benefits">
                 <div class="benefit">
                     <div class="benefit-icon">
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <h3>Expertos en la isla</h3>
-                    <p>+200 naves vaciadas en Gran Canaria. Conocemos todos los requisitos legales locales</p>
+                    <p>+200 naves vaciadas en Gran Canaria. Conocemos todos los requisitos legales locales y del Cabildo</p>
                 </div>
                 <div class="benefit">
                     <div class="benefit-icon">
                         <i class="fas fa-truck"></i>
                     </div>
-                    <h3>Flota propia</h3>
-                    <p>Camiones y personal disponible en toda la isla para recogidas urgentes</p>
+                    <h3>Flota propia en GC</h3>
+                    <p>Camiones y personal disponible en toda la isla para recogidas urgentes en Las Palmas, Telde y sur</p>
                 </div>
                 <div class="benefit">
                     <div class="benefit-icon">
@@ -52,7 +451,7 @@
         </div>
     </section>
 
-    <!-- Servicios con ejemplos locales -->
+    <!-- Servicios -->
     <section class="services" id="servicios">
         <div class="container">
             <h2 class="section-title">Servicios para toda <span style="color: var(--verde-oscuro);">Gran Canaria</span></h2>
@@ -61,8 +460,8 @@
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1585698067914-63e643353599?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
                     <div class="service-content">
                         <h3>Vaciamiento industrial</h3>
-                        <p>Polígonos industriales de Jinámar, Arinaga o El Goro. Retiramos maquinaria, estanterías y residuos peligrosos</p>
-                        <a href="https://wa.me/34675280961?text=Necesito%20vaciar%20una%20nave%20industrial%20en%20Gran%20Canaria" class="btn-whatsapp" target="_blank">
+                        <p>Polígonos de Jinámar, Arinaga o El Goro. Retiramos maquinaria, estanterías y residuos peligrosos con certificado</p>
+                        <a href="https://wa.me/34675280961?text=Necesito%20vaciar%20una%20nave%20industrial%20en%20Gran%20Canaria" class="btn-whatsapp" style="padding: 8px 15px; font-size: 14px; margin-top: 15px; display: inline-block;" target="_blank">
                             <i class="fab fa-whatsapp"></i> Consultar zonas
                         </a>
                     </div>
@@ -72,7 +471,7 @@
                     <div class="service-content">
                         <h3>Limpieza por cierre</h3>
                         <p>Locales comerciales en Las Palmas, centros comerciales o negocios en el sur. Dejamos el espacio listo para traspaso</p>
-                        <a href="https://wa.me/34675280961?text=Necesito%20limpiar%20un%20local%20en%20Gran%20Canaria" class="btn-whatsapp" target="_blank">
+                        <a href="https://wa.me/34675280961?text=Necesito%20limpiar%20un%20local%20en%20Gran%20Canaria" class="btn-whatsapp" style="padding: 8px 15px; font-size: 14px; margin-top: 15px; display: inline-block;" target="_blank">
                             <i class="fab fa-whatsapp"></i> Ejemplos de trabajos
                         </a>
                     </div>
@@ -82,7 +481,7 @@
                     <div class="service-content">
                         <h3>Gestión de residuos</h3>
                         <p>Cumplimos con la normativa del Cabildo. Certificados válidos para auditorías en toda Canarias</p>
-                        <a href="https://wa.me/34675280961?text=Necesito%20certificado%20de%20residuos%20en%20Gran%20Canaria" class="btn-whatsapp" target="_blank">
+                        <a href="https://wa.me/34675280961?text=Necesito%20certificado%20de%20residuos%20en%20Gran%20Canaria" class="btn-whatsapp" style="padding: 8px 15px; font-size: 14px; margin-top: 15px; display: inline-block;" target="_blank">
                             <i class="fab fa-whatsapp"></i> Info legal
                         </a>
                     </div>
@@ -91,7 +490,7 @@
         </div>
     </section>
 
-    <!-- CTA con urgencia local -->
+    <!-- CTA WhatsApp -->
     <section class="cta-whatsapp" id="contacto">
         <div class="container">
             <h2>¿Vas a cerrar tu negocio en Gran Canaria?</h2>
@@ -108,15 +507,41 @@
         </div>
     </section>
 
-    <!-- Footer con ubicación -->
+    <!-- Footer -->
     <footer>
-        <!-- (Mantén el footer anterior) -->
-        <div style="margin-top: 30px;">
-            <p><i class="fas fa-map-marked-alt"></i> <strong>Zona de servicio:</strong> Toda la isla de Gran Canaria</p>
-            <p><i class="fas fa-warehouse"></i> Polígono Industrial de Arinaga - Nave 23</p>
+        <div class="container">
+            <div class="footer-logo">
+                <div class="logo" style="justify-content: center;">
+                    <div class="logo-g"></div>
+                    <div>
+                        <span class="logo-text" style="color: white;">ATRIC</span>
+                        <span class="logo-tagline" style="color: #ccc;">Gestión Ambiental</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="https://wa.me/34675280961" target="_blank">Contacto</a>
+                <a href="#">Política de privacidad</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-location">
+                <p><i class="fas fa-map-marked-alt"></i> <strong>Zona de servicio:</strong> Toda la isla de Gran Canaria</p>
+                <p><i class="fas fa-warehouse"></i> Polígono Industrial de Arinaga - Nave 23</p>
+            </div>
+            <p class="copyright">© 2023 GATRIC Gestión Ambiental. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- (Mantén el botón flotante de WhatsApp) -->
+    <!-- WhatsApp Button Flotante -->
+    <a href="https://wa.me/34675280961" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
