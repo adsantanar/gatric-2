@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GATRIC - Vaciamos y Gestionamos Residuos | Canarias</title>
-    <meta name="description" content="Vaciamos naves, almacenes y viviendas con certificado legal. Solicita presupuesto sin costo para retirada de residuos en Canarias.">
+    <title>GATRIC - Vaciamos Naves y Gestionamos Residuos | Canarias</title>
+    <meta name="description" content="Vaciamos naves, almacenes y viviendas con certificado legal. Contacta por WhatsApp para presupuesto inmediato">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -28,7 +28,7 @@
             line-height: 1.6;
         }
         
-        h1, h2, h3, h4 {
+        h1, h2, h3 {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
         }
@@ -117,19 +117,20 @@
             color: var(--verde-oscuro);
         }
         
-        .btn {
+        .btn-whatsapp {
             display: inline-block;
-            background-color: var(--naranja);
+            background-color: #25D366;
             color: var(--blanco);
             padding: 10px 25px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
         }
         
-        .btn:hover {
-            background-color: #E65100;
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
         }
         
         /* Hero Section */
@@ -149,7 +150,6 @@
             max-width: 800px;
             margin: 0 auto;
         }
-       
         
         .hero h1 {
             font-size: 48px;
@@ -239,76 +239,25 @@
             margin-bottom: 15px;
         }
         
-        /* Formulario */
-        .contact-form {
-            padding: 80px 0;
+        /* CTA WhatsApp */
+        .cta-whatsapp {
+            padding: 60px 0;
             background-color: var(--verde-oscuro);
+            text-align: center;
             color: var(--blanco);
         }
         
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: var(--blanco);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .form-container h2 {
-            color: var(--verde-oscuro);
+        .cta-whatsapp h2 {
             margin-bottom: 30px;
-            text-align: center;
+            font-size: 32px;
         }
         
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--gris-texto);
-            font-weight: 600;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        .form-group textarea {
-            height: 120px;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background-color: var(--naranja);
-            color: var(--blanco);
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background-color: #E65100;
-        }
-        
-        .whatsapp-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            color: var(--verde-oscuro);
-            font-weight: 600;
+        .cta-whatsapp p {
+            margin-bottom: 30px;
+            font-size: 18px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         /* WhatsApp Button */
@@ -407,17 +356,10 @@
             .benefit {
                 flex: 0 0 100%;
             }
-            
-            .form-container {
-                padding: 30px 20px;
-            }
         }
     </style>
 </head>
 <body>
-    <form action="https://formsubmit.co/asantana@chatarrascanarias.es" method="POST" />
-
-        <input type="email" name="email">
     <!-- Header -->
     <header>
         <div class="container header-container">
@@ -436,44 +378,48 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="#contacto" class="btn">Solicitar presupuesto</a>
+            <a href="https://wa.me/34675280961" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Presupuesto
+            </a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="container hero-content">
-            <h1>Vaciamos naves, almacenes y viviendas <span style="color: var(--naranja);">en tiempo récord</span></h1>
-            <p>Presupuesto sin costo, recogida programada y documentación legal para tu tranquilidad</p>
-            <a href="#contacto" class="btn">Solicitar presupuesto</a>
+            <h1>Vaciamos naves y gestionamos residuos <span style="color: var(--naranja);">en 24-48 horas</span></h1>
+            <p>Contacta por WhatsApp para un presupuesto inmediato y sin compromiso</p>
+            <a href="https://wa.me/34675280961" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Solicitar por WhatsApp
+            </a>
         </div>
     </section>
 
     <!-- Problema + Solución -->
     <section class="problem-solution" id="como-funciona">
         <div class="container">
-            <h2 class="section-title">¿Necesitas vaciar un espacio pero no sabes cómo gestionar los residuos?</h2>
+            <h2 class="section-title">¿Necesitas vaciar un local, nave o vivienda?</h2>
             <div class="benefits">
                 <div class="benefit">
                     <div class="benefit-icon">
-                        <i class="fas fa-calendar-check"></i>
+                        <i class="fas fa-clock"></i>
                     </div>
-                    <h3>Sin estrés</h3>
-                    <p>Te recogemos todo: muebles, escombros, maquinaria y más. Programamos la recogida cuando más te convenga.</p>
+                    <h3>Rápido y sencillo</h3>
+                    <p>Envíanos fotos por WhatsApp y te damos presupuesto en menos de 2 horas</p>
                 </div>
                 <div class="benefit">
                     <div class="benefit-icon">
-                        <i class="fas fa-file-contract"></i>
+                        <i class="fas fa-file-alt"></i>
                     </div>
-                    <h3>Certificado legal</h3>
-                    <p>Documentación completa para auditorías o traspasos. Cumplimos con todas las normativas ambientales.</p>
+                    <h3>Certificado incluido</h3>
+                    <p>Documentación legal para traspasos o cierres de actividad</p>
                 </div>
                 <div class="benefit">
                     <div class="benefit-icon">
-                        <i class="fas fa-bolt"></i>
+                        <i class="fas fa-euro-sign"></i>
                     </div>
-                    <h3>Rapidez</h3>
-                    <p>Servicio urgente disponible en 24-48 horas. Más de 500 naves vaciadas en Canarias.</p>
+                    <h3>Precios competitivos</h3>
+                    <p>Te ahorramos hasta un 40% frente a otros gestores de residuos</p>
                 </div>
             </div>
         </div>
@@ -485,35 +431,47 @@
             <h2 class="section-title">Nuestros Servicios</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://agcinmo.com/wp-content/uploads/2024/02/tipos-naves-industriales-800x430.jpg);"></div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581093196276-5d1b613ac6a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
                     <div class="service-content">
-                        <h3>Vaciamiento de naves industriales</h3>
-                        <p>Limpieza total para cierres de negocio o traspasos. Retiramos maquinaria, mobiliario y residuos.</p>
+                        <h3>Vaciamiento completo</h3>
+                        <p>Naves industriales, almacenes, oficinas y locales comerciales. Nos encargamos de todo.</p>
+                        <a href="https://wa.me/34675280961?text=Quiero%20información%20sobre%20vaciamiento%20de%20naves" class="btn-whatsapp" style="padding: 8px 15px; font-size: 14px; margin-top: 15px; display: inline-block;" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </a>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
                     <div class="service-content">
-                        <h3>Limpieza por cierre de actividad</h3>
-                        <p>Deja el espacio listo para traspaso o venta, sin rastro de residuos.</p>
+                        <h3>Limpieza por cierre</h3>
+                        <p>Deja el espacio listo para traspaso o venta. Incluye retirada de muebles y escombros.</p>
+                        <a href="https://wa.me/34675280961?text=Necesito%20limpieza%20por%20cierre%20de%20local" class="btn-whatsapp" style="padding: 8px 15px; font-size: 14px; margin-top: 15px; display: inline-block;" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </a>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
                     <div class="service-content">
                         <h3>Gestión documental</h3>
-                        <p>Certificado de disposición final para cumplir con la normativa (Ley 22/2011).</p>
+                        <p>Certificados de disposición final para cumplir con la normativa ambiental.</p>
+                        <a href="https://wa.me/34675280961?text=Necesito%20certificado%20de%20gestión%20de%20residuos" class="btn-whatsapp" style="padding: 8px 15px; font-size: 14px; margin-top: 15px; display: inline-block;" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
-                <a href="https://wa.me/34675280961" class="whatsapp-link">
-                    <i class="fab fa-whatsapp"></i> ¿Prefieres WhatsApp? Escríbenos al 675 280 961
-                </a>
-            </div>
+    <!-- CTA WhatsApp -->
+    <section class="cta-whatsapp" id="contacto">
+        <div class="container">
+            <h2>¿Listo para vaciar tu espacio?</h2>
+            <p>Envíanos fotos por WhatsApp al <strong>675 280 961</strong> y te daremos presupuesto en menos de 2 horas. Sin compromiso.</p>
+            <a href="https://wa.me/34675280961" class="btn-whatsapp" style="font-size: 18px; padding: 15px 30px;" target="_blank">
+                <i class="fab fa-whatsapp"></i> Enviar mensaje ahora
+            </a>
         </div>
     </section>
 
@@ -533,7 +491,7 @@
                 <a href="#inicio">Inicio</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#como-funciona">Cómo funciona</a>
-                <a href="#contacto">Contacto</a>
+                <a href="https://wa.me/34675280961" target="_blank">Contacto</a>
                 <a href="#">Política de privacidad</a>
             </div>
             <div class="social-icons">
@@ -545,7 +503,7 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Button -->
+    <!-- WhatsApp Button Flotante -->
     <a href="https://wa.me/34675280961" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
