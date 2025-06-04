@@ -380,6 +380,29 @@
                 padding: 10px 20px;
                 font-size: 14px;
             }
+             /* Nuevos estilos para el video */
+        .video-container {
+            margin: 40px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+        
+        @media (max-width: 768px) {
+            .video-container {
+                margin: 25px auto;
+            }
+            .video-container iframe {
+                height: 250px;
+            }
+    
         }
     </style>
 </head>
@@ -575,6 +598,23 @@ src="https://www.facebook.com/tr?id=1028942293912475&ev=PageView&noscript=1"
     <!-- WhatsApp Button Flotante -->
     <a href="https://wa.me/34675280961" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
+          <!-- Hero Section con Video -->
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <h1>Servicio profesional de <span style="color: var(--naranja);">vaciamiento en Gran Canaria</span></h1>
+            <p class="location-tag"><i class="fas fa-map-marker-alt"></i> Atendemos toda la isla - Las Palmas, Telde, Vecindario, Arucas y más</p>
+            <p>¿Cierre de negocio? ¿Mudanza? Nosotros nos encargamos de los residuos con garantía legal</p>
+            
+            <!-- Contenedor del Video -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/AeI-_WVzDXU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <a href="https://wa.me/34675280961" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Presupuesto GRATIS por WhatsApp
+            </a>
+        </div>
+    </section>
     </a>
 </body>
 </html>
