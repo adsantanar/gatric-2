@@ -381,41 +381,53 @@
                 font-size: 14px;
             }
      /* Mejoras para el grid de testimonios */
+         <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
         .testimonials-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
-        .testimonial-card {
-            background: white;
+        
+        .testimonial {
+            background-color: white;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+        }
+        
+        .testimonial-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-author {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
         }
 
-        /* Alinea el contenido al centro */
-        .testimonial-content {
-            flex-grow: 1;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .testimonials-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .testimonials-container {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
     <script
@@ -563,66 +575,23 @@ src="https://www.facebook.com/tr?id=1028942293912475&ev=PageView&noscript=1"
         </div>
     </section>
   <!-- Sección de Testimonios (POSICIÓN RECOMENDADA) -->
-    <section class="testimonials" id="testimonios">
-        <div class="container">
-            <h2 class="section-title">Clientes que confiaron en <span style="color: var(--verde-oscuro);">GATRIC</span></h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">Más de 20 empresas en Gran Canaria ya han usado nuestros servicios</p>
-            
-            <div class="testimonials-container">
-                <!-- Testimonio 1 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-content">"Cerramos nuestra nave en Arinaga y GATRIC lo solucionó en 48 horas. Los documentos de la gestión y sus certificados correspondiente. ¡Totalmente recomendados!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h4>Juan Rodríguez</h4>
-                            <p>Empresa de logística, Las Palmas</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonio 2 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-content">"Necesitábamos vaciar un local comercial en Vecindario urgentemente. Cumplieron el plazo y el precio fue justo. Volveré a llamarlos."</p>
-                    <div class="testimonial-author">
-                            <h4>María González</h4>
-                            <p>Tienda de moda, Vecindario</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonio 3 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="testimonial-content">"Por fin una empresa seria en GC para gestión de residuos. Nos ayudaron con la documentación de todos los residuos para entregar en el ayuntamiento y cumplir con la normativa."</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h4>Carlos Martín</h4>
-                            <p>Constructor, Telde</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+   <div class="testimonials-container">
+        <div class="testimonial">
+            <div class="testimonial-number">66</div>
+            <div class="testimonial-author">ANTONIO LÓPEZ</div>
+            <div class="testimonial-text">
+                Mi empresa de reformas ha tenido un flujo constante de clientes interesados en renovar sus hogares. Además, hemos logrado expandir nuestro negocio y contratar a más personal. Sin duda, ha sido una gran inversión para nosotros
+            </div>
+        </div>
+        
+        <div class="testimonial">
+            <div class="testimonial-number">66</div>
+            <div class="testimonial-author">ROBERTO COLL</div>
+            <div class="testimonial-text">
+                Desde que comencé a trabajar con Juan Antonio, he visto un aumento notable en el número de proyectos y contratos. Su experiencia en el mercado y su compromiso con la calidad son impresionantes
+            </div>
+        </div>
+    </div>
     </section>
     <!-- CTA WhatsApp -->
     <section class="cta-whatsapp" id="contacto">
