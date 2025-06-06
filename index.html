@@ -380,75 +380,41 @@
                 padding: 10px 20px;
                 font-size: 14px;
             }
-     /* Nuevos estilos para testimonios */
-        .testimonials {
-            padding: 80px 0;
-            background-color: #f9f9f9;
-        }
-        
+     /* Mejoras para el grid de testimonios */
         .testimonials-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 40px;
         }
-        
+
         .testimonial-card {
             background: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             position: relative;
-        }
-        
-        .testimonial-card:before {
-            content: """;
-            font-family: Georgia;
-            font-size: 80px;
-            color: var(--naranja);
-            opacity: 0.2;
-            position: absolute;
-            top: 10px;
-            left: 15px;
-        }
-        
-        .testimonial-content {
-            font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .testimonial-author {
+            height: 100%;
             display: flex;
-            align-items: center;
+            flex-direction: column;
         }
-        
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-            border: 2px solid var(--verde-oscuro);
+
+        /* Alinea el contenido al centro */
+        .testimonial-content {
+            flex-grow: 1;
         }
-        
-        .author-info h4 {
-            margin: 0;
-            color: var(--verde-oscuro);
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .testimonials-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
-        
-        .author-info p {
-            margin: 5px 0 0;
-            font-size: 14px;
-            color: #666;
-        }
-        
-        .stars {
-            color: var(--naranja);
-            margin: 10px 0;
-        }
-    
+
+        @media (max-width: 768px) {
+            .testimonials-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
