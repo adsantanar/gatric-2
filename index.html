@@ -381,107 +381,73 @@
                 font-size: 14px;
             }
 
-      <!testimonios html>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonios - Estilo Gran Canaria</title>
-    <style>
-        :root {
-            --color-primario: #2c3e50;
-            --color-secundario: #e74c3c;
-            --color-texto: #333;
-            --color-fondo: #f9f9f9;
+        /* Nuevos estilos para testimonios */
+        .testimonials {
+            padding: 80px 0;
+            background-color: #f9f9f9;
         }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            background-color: var(--color-fondo);
-            color: var(--color-texto);
-        }
-        
-        .contenedor-principal {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .titulo-seccion {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--color-primario);
-        }
-        
-        .titulo-seccion h2 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .titulo-seccion .divisor {
-            width: 80px;
-            height: 3px;
-            background-color: var(--color-secundario);
-            margin: 0 auto;
-        }
-        
-        .contenedor-testimonios {
+       
+        .testimonials-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
-        
-        .tarjeta-testimonio {
+       
+        .testimonial-card {
             background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
         }
-        
-        .tarjeta-testimonio:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+       
+        .testimonial-card:before {
+            content: """;
+            font-family: Georgia;
+            font-size: 80px;
+            color: var(--naranja);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 15px;
         }
-        
-        .numero-testimonio {
-            background-color: var(--color-primario);
-            color: white;
-            font-size: 1.8rem;
-            font-weight: bold;
-            padding: 15px;
-            text-align: center;
-        }
-        
-        .contenido-testimonio {
-            padding: 25px;
-        }
-        
-        .autor-testimonio {
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: var(--color-primario);
-            text-transform: uppercase;
-        }
-        
-        .texto-testimonio {
-            line-height: 1.6;
-            color: #555;
+       
+        .testimonial-content {
             font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
         }
-        
-        @media (max-width: 768px) {
-            .contenedor-testimonios {
-                grid-template-columns: 1fr;
-            }
-            
-            .titulo-seccion h2 {
-                font-size: 1.8rem;
-            }
+       
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+       
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid var(--verde-oscuro);
+        }
+       
+        .author-info h4 {
+            margin: 0;
+            color: var(--verde-oscuro);
+        }
+       
+        .author-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+       
+        .stars {
+            color: var(--naranja);
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -630,47 +596,69 @@ src="https://www.facebook.com/tr?id=1028942293912475&ev=PageView&noscript=1"
         </div>
     </section>
 
-<div class="contenedor-principal">
-        <div class="titulo-seccion">
-            <h2>Testimonios</h2>
-            <div class="divisor"></div>
-        </div>
-        
-        <div class="contenedor-testimonios">
-            <!-- Testimonio 1 -->
-            <div class="tarjeta-testimonio">
-                <div class="numero-testimonio">66</div>
-                <div class="contenido-testimonio">
-                    <div class="autor-testimonio">ANTONIO LÓPEZ</div>
-                    <div class="texto-testimonio">
-                        "Mi empresa de reformas ha tenido un flujo constante de clientes interesados en renovar sus hogares. Además, hemos logrado expandir nuestro negocio y contratar a más personal. Sin duda, ha sido una gran inversión para nosotros."
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Testimonio 2 -->
-            <div class="tarjeta-testimonio">
-                <div class="numero-testimonio">66</div>
-                <div class="contenido-testimonio">
-                    <div class="autor-testimonio">ROBERTO COLL</div>
-                    <div class="texto-testimonio">
-                        "Desde que comencé a trabajar con Juan Antonio, he visto un aumento notable en el número de proyectos y contratos. Su experiencia en el mercado y su compromiso con la calidad son impresionantes."
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Testimonio 3 (ejemplo) -->
-            <div class="tarjeta-testimonio">
-                <div class="numero-testimonio">66</div>
-                <div class="contenido-testimonio">
-                    <div class="autor-testimonio">MARÍA GARCÍA</div>
-                    <div class="texto-testimonio">
-                        "La profesionalidad y atención al detalle superaron todas mis expectativas. Transformaron completamente mi espacio en algo que parece sacado de una revista de diseño."
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<<<!-- Sección de Testimonios (POSICIÓN RECOMENDADA) -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <h2 class="section-title">Clientes que confiaron en <span style="color: var(--verde-oscuro);">GATRIC</span></h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">Más de 20 empresas en Gran Canaria ya han usado nuestros servicios</p>
+            
+            <div class="testimonials-container">
+                <!-- Testimonio 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-content">"Cerramos nuestra nave en Arinaga y GATRIC lo solucionó en 48 horas. Los documentos de la gestión y sus certificados correspondiente. ¡Totalmente recomendados!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Juan Rodríguez</h4>
+                            <p>Empresa de logística, Las Palmas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-content">"Necesitábamos vaciar un local comercial en Vecindario urgentemente. Cumplieron el plazo y el precio fue justo. Volveré a llamarlos."</p>
+                    <div class="testimonial-author">
+                            <h4>María González</h4>
+                            <p>Tienda de moda, Vecindario</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-content">"Por fin una empresa seria en GC para gestión de residuos. Nos ayudaron con la documentación de todos los residuos para entregar en el ayuntamiento y cumplir con la normativa."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Carlos Martín</h4>
+                            <p>Constructor, Telde</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- CTA WhatsApp -->
     <section class="cta-whatsapp" id="contacto">
         <div class="container">
