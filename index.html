@@ -381,69 +381,108 @@
                 font-size: 14px;
             }
 
-        <meta charset="UTF-8">
+      <!testimonios html>
+
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonios en Columnas</title>
+    <title>Testimonios - Estilo Gran Canaria</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
+        :root {
+            --color-primario: #2c3e50;
+            --color-secundario: #e74c3c;
+            --color-texto: #333;
+            --color-fondo: #f9f9f9;
         }
         
-        .testimonials-container {
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+        }
+        
+        .contenedor-principal {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
         }
         
-        .testimonial-column {
-            flex: 1;
-            min-width: 300px;
-            background-color: white;
-            padding: 25px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--color-primario);
         }
         
-        .testimonial-number {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
+        .titulo-seccion h2 {
+            font-size: 2.2rem;
             margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .testimonial-author {
-            font-size: 18px;
+        .titulo-seccion .divisor {
+            width: 80px;
+            height: 3px;
+            background-color: var(--color-secundario);
+            margin: 0 auto;
+        }
+        
+        .contenedor-testimonios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .tarjeta-testimonio {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tarjeta-testimonio:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .numero-testimonio {
+            background-color: var(--color-primario);
+            color: white;
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .contenido-testimonio {
+            padding: 25px;
+        }
+        
+        .autor-testimonio {
+            font-weight: bold;
+            font-size: 1.2rem;
             margin-bottom: 15px;
+            color: var(--color-primario);
             text-transform: uppercase;
         }
         
-        .testimonial-text {
-            font-size: 16px;
-            line-height: 1.5;
+        .texto-testimonio {
+            line-height: 1.6;
             color: #555;
+            font-style: italic;
         }
-
-        @media (max-width: 1000px) {
-            .testimonial-column {
-                min-width: calc(50% - 20px);
+        
+        @media (max-width: 768px) {
+            .contenedor-testimonios {
+                grid-template-columns: 1fr;
+            }
+            
+            .titulo-seccion h2 {
+                font-size: 1.8rem;
             }
         }
-
-        @media (max-width: 600px) {
-            .testimonial-column {
-                min-width: 100%;
-            }
-        }
-   
-
     </style>
 </head>
     <script
@@ -591,28 +630,44 @@ src="https://www.facebook.com/tr?id=1028942293912475&ev=PageView&noscript=1"
         </div>
     </section>
 
-  <div class="testimonials-container">
-        <div class="testimonial-column">
-            <div class="testimonial-number">66</div>
-            <div class="testimonial-author">ANTONIO LÓPEZ</div>
-            <div class="testimonial-text">
-                Mi empresa de reformas ha tenido un flujo constante de clientes interesados en renovar sus hogares. Además, hemos logrado expandir nuestro negocio y contratar a más personal. Sin duda, ha sido una gran inversión para nosotros.
-            </div>
+<div class="contenedor-principal">
+        <div class="titulo-seccion">
+            <h2>Testimonios</h2>
+            <div class="divisor"></div>
         </div>
         
-        <div class="testimonial-column">
-            <div class="testimonial-number">66</div>
-            <div class="testimonial-author">ROBERTO COLL</div>
-            <div class="testimonial-text">
-                Desde que comencé a trabajar con Juan Antonio, he visto un aumento notable en el número de proyectos y contratos. Su experiencia en el mercado y su compromiso con la calidad son impresionantes.
+        <div class="contenedor-testimonios">
+            <!-- Testimonio 1 -->
+            <div class="tarjeta-testimonio">
+                <div class="numero-testimonio">66</div>
+                <div class="contenido-testimonio">
+                    <div class="autor-testimonio">ANTONIO LÓPEZ</div>
+                    <div class="texto-testimonio">
+                        "Mi empresa de reformas ha tenido un flujo constante de clientes interesados en renovar sus hogares. Además, hemos logrado expandir nuestro negocio y contratar a más personal. Sin duda, ha sido una gran inversión para nosotros."
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="testimonial-column">
-            <div class="testimonial-number">66</div>
-            <div class="testimonial-author">NOMBRE CLIENTE</div>
-            <div class="testimonial-text">
-                [Aquí puedes agregar el texto del tercer testimonio. Este es un espacio reservado para otro comentario positivo sobre tus servicios.]
+            
+            <!-- Testimonio 2 -->
+            <div class="tarjeta-testimonio">
+                <div class="numero-testimonio">66</div>
+                <div class="contenido-testimonio">
+                    <div class="autor-testimonio">ROBERTO COLL</div>
+                    <div class="texto-testimonio">
+                        "Desde que comencé a trabajar con Juan Antonio, he visto un aumento notable en el número de proyectos y contratos. Su experiencia en el mercado y su compromiso con la calidad son impresionantes."
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonio 3 (ejemplo) -->
+            <div class="tarjeta-testimonio">
+                <div class="numero-testimonio">66</div>
+                <div class="contenido-testimonio">
+                    <div class="autor-testimonio">MARÍA GARCÍA</div>
+                    <div class="texto-testimonio">
+                        "La profesionalidad y atención al detalle superaron todas mis expectativas. Transformaron completamente mi espacio en algo que parece sacado de una revista de diseño."
+                    </div>
+                </div>
             </div>
         </div>
     </div>
